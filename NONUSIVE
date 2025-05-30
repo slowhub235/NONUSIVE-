@@ -1,0 +1,99 @@
+                                                                                 game:GetService(      
+                                                                        "StarterGui"):SetCore("SendNotification",{Title 
+                                                                    ="Read!",Text="This script is come to you for free.",Button1= 
+                                                                "thanks",Button2="okay?",Duration=10});local TweenService=game:         
+                                                            GetService("TweenService");local UIS=game:GetService("UserInputService");     
+                                                          local gui=Instance.new("ScreenGui");gui.Name="SimpleKeyUI";gui.Parent=game.       
+                                                        CoreGui;gui.ResetOnSpawn=false;local function MakeDraggable(frame) local dragging,    
+                                                      dragInput,dragStart,startPos;frame.InputBegan:Connect(function(input) if (input.          
+                                                    UserInputType==Enum.UserInputType.MouseButton1) then dragging=true;dragStart=input.Position;  
+                                                  startPos=frame.Position;input.Changed:Connect(function() if (input.UserInputState==Enum.          
+                                                  UserInputState.End) then dragging=false;end end);end end);UIS.InputChanged:Connect(function(input)  
+                                                if (dragging and (input==dragInput)) then local delta=input.Position-dragStart ;frame.Position=UDim2.   
+                                                new(startPos.X.Scale,startPos.X.Offset + delta.X ,startPos.Y.Scale,startPos.Y.Offset + delta.Y );end end) 
+                                              ;frame.InputChanged:Connect(function(input) if (input.UserInputType==Enum.UserInputType.MouseMovement) then   
+                                              dragInput=input;end end);end local window=Instance.new("Frame",gui);window.Size=UDim2.new(0,360,0,140);window 
+                                            .Position=UDim2.new(0.5, -180,0.5, -70);window.BackgroundColor3=Color3.fromRGB(30,30,30);window.BorderSizePixel=0 
+                                            ;window.Name="MainWindow";MakeDraggable(window);Instance.new("UICorner",window).CornerRadius=UDim.new(0,6);local    
+                                          titleLabel=Instance.new("TextLabel",window);titleLabel.Size=UDim2.new(1,0,0,30);titleLabel.Position=UDim2.new(0,0,0,0); 
+                                          titleLabel.BackgroundTransparency=1;titleLabel.Text="Enter Key";titleLabel.TextColor3=Color3.new(1,1,1);titleLabel.Font=  
+                                          Enum.Font.GothamBold;titleLabel.TextSize=22;local keyInput=Instance.new("TextBox",window);keyInput.Size=UDim2.new(0,240,0,  
+                                          40);keyInput.Position=UDim2.new(0,20,0,45);keyInput.BackgroundColor3=Color3.fromRGB(50,50,50);keyInput.TextColor3=Color3.   
+                                        new(1,1,1);keyInput.ClearTextOnFocus=false;keyInput.PlaceholderText="Your key here";keyInput.Font=Enum.Font.Gotham;keyInput.    
+                                        TextSize=18;Instance.new("UICorner",keyInput).CornerRadius=UDim.new(0 --[[==============================]],4);local getKeyBtn=    
+                                        Instance.new("TextButton",window);getKeyBtn.Size=UDim2.new( --[[============================================]]0,80,0,40);         
+                                        getKeyBtn.Position=UDim2.new(0,270,0,45);getKeyBtn.     --[[======================================================]]                
+                                      BackgroundColor3=Color3.fromRGB(60,90,140);getKeyBtn. --[[==========================================================]]Text="Get Key";   
+                                      getKeyBtn.TextColor3=Color3.new(1,1,1);getKeyBtn.   --[[==============================================================]]Font=Enum.Font. 
+                                      GothamBold;getKeyBtn.TextSize=18;Instance.new(      --[[================================================================]]"UICorner",     
+                                      getKeyBtn).CornerRadius=UDim.new(0,4);local         --[[==================================================================]]redeemBtn=    
+                                      Instance.new("TextButton",window);redeemBtn.Size=   --[[==================================================================]]UDim2.new(0,320   
+                                    ,0,40);redeemBtn.Position=UDim2.new(0,20,0,95);       --[[====================================================================]]redeemBtn.    
+                    BackgroundColor3=Color3.fromRGB(70,130,70);redeemBtn.Text=            --[[====================================================================]]"Redeem Key";   
+              redeemBtn.TextColor3=Color3.new(1,1,1);redeemBtn.Font=Enum.Font.GothamBold; --[[======================================================================]]redeemBtn.    
+            TextSize=20;Instance.new("UICorner",redeemBtn).CornerRadius=UDim.new(0,4);    --[[======================================================================]]local fullUI= 
+          Instance.new("Frame",gui);fullUI.Size=UDim2.new(0,480,0,340);fullUI.Position=   --[[======================================================================]]UDim2.new(0.5 
+        , -240,0.5, -170);fullUI.BackgroundColor3=Color3.fromRGB(30,30,40);fullUI.        --[[======================================================================]]              
+        BackgroundTransparency=0.3;fullUI.BorderSizePixel=0;fullUI.Visible=false;Instance --[[======================================================================]].new(         
+      "UICorner",fullUI).CornerRadius=UDim.new(0,8);MakeDraggable(fullUI);local topBar=   --[[======================================================================]]Instance.new( 
+      "Frame",fullUI);topBar.Size=UDim2.new(1,0,0,40);topBar.BackgroundColor3=Color3.       --[[==================================================================]]fromRGB(20,20,  
+      30);topBar.BackgroundTransparency=0.3;Instance.new("UICorner",topBar).CornerRadius=   --[[================================================================]]UDim.new(0,8);    
+    local titleLabel2=Instance.new("TextLabel",topBar);titleLabel2.Size=UDim2.new(1, -80,1, --[[==============================================================]]0);titleLabel2.   
+    Position=UDim2.new(0,10,0,0);titleLabel2.BackgroundTransparency=1;titleLabel2.Text=       --[[==========================================================]]"NONUSIVE BB";      
+    titleLabel2.TextColor3=Color3.fromRGB(200,200,255);titleLabel2.Font=Enum.Font.FredokaOne;   --[[====================================================]]titleLabel2.TextSize=22 
+    ;titleLabel2.TextXAlignment=Enum.TextXAlignment.Left;local minBtn=Instance.new("TextButton",  --[[==============================================]]topBar);minBtn.Size=UDim2 
+    .new(0,40,0,36);minBtn.Position=UDim2.new(1, -90,0,2);minBtn.BackgroundColor3=Color3.fromRGB(70,  --[[====================================]]70,90);minBtn.                
+    BackgroundTransparency=0.3;minBtn.Text="—";minBtn.TextColor3=Color3.fromRGB(255,255,255);minBtn.Font= --[[========================]]Enum.Font.GothamBold;minBtn.TextSize= 
+    30;minBtn.AutoButtonColor=false;Instance.new("UICorner",minBtn).CornerRadius=UDim.new(0,6);local closeBtn=Instance.new("TextButton",topBar);closeBtn.Size=UDim2.new(0,  
+  40,0,36);closeBtn.Position=UDim2.new(1, -45,0,2);closeBtn.BackgroundColor3=Color3.fromRGB(150,40,40);closeBtn.BackgroundTransparency=1;closeBtn.Text="✕";closeBtn.      
+  TextColor3=Color3.fromRGB(255,255,255);closeBtn.Font=Enum.Font.GothamBold;closeBtn.TextSize=24;closeBtn.AutoButtonColor=false;Instance.new("UICorner",closeBtn).      
+  CornerRadius=UDim.new(0,6);local tabsBar=Instance.new("Frame",fullUI);tabsBar.Size=UDim2.new(0,120,1, -40);tabsBar.Position=UDim2.new(0,0,0,40);tabsBar.                
+  BackgroundColor3=Color3.fromRGB(25,25,35);tabsBar.BackgroundTransparency=0.3;Instance.new("UICorner",tabsBar).CornerRadius=UDim.new(0,6);local tabs={};local activeTab= 
+  nil;local function clearAllTabs() for _,tabContent in ipairs(tabs) do tabContent.Visible=false;end end local function createTab(name) local btn=Instance.new(           
+  "TextButton",tabsBar);btn.Size=UDim2.new(1, -20,0,40);btn.Position=UDim2.new(0,10,0,( #tabs * 50) + 10 );btn.BackgroundColor3=Color3.fromRGB(45,45,65);btn.             
+  BackgroundTransparency=0.3;btn.Text=name;btn.TextColor3=Color3.new(1,1,1);btn.Font=Enum.Font.Gotham;btn.TextSize=20;Instance.new("UICorner",btn).CornerRadius=UDim.new( 
+  0,8);local tabContent=Instance.new("Frame",fullUI);tabContent.Name=name   .. "_Content" ;tabContent.Size=UDim2.new(1, -140,1, -85);tabContent.Position=UDim2.new(0,130, 
+  0,85);tabContent.BackgroundTransparency=1;tabContent.Visible=false;local layout=Instance.new("UIListLayout",tabContent);layout.Padding=UDim.new(0,12);layout.SortOrder= 
+  Enum.SortOrder.LayoutOrder;layout.HorizontalAlignment=Enum.HorizontalAlignment.Center;btn.MouseButton1Click:Connect(function() clearAllTabs();tabContent.Visible=true;  
+  activeTab=tabContent;end);if ( #tabs==0) then tabContent.Visible=true;activeTab=tabContent;end table.insert(tabs,tabContent);return tabContent;end local function       
+  addButton(tab,text,callback) local button=Instance.new("TextButton",tab);button.Size=UDim2.new(0,300,0,45);button.BackgroundColor3=Color3.fromRGB(60,90,140);button.Text= 
+  text;button.TextColor3=Color3.new(1,1,1);button.Font=Enum.Font.GothamBold;button.TextSize=20;button.AutoButtonColor=false;Instance.new("UICorner",button).CornerRadius=   
+  UDim.new(0,6);button.MouseEnter:Connect(function() button.BackgroundColor3=Color3.fromRGB(80,110,180);end);button.MouseLeave:Connect(function() button.BackgroundColor3=  
+  Color3.fromRGB(60,90,140);end);button.MouseButton1Click:Connect(callback);return button;end local mainTab=createTab("Main");local settingsTab=createTab("Settings");      
+  addButton(mainTab,"Auto Parry",function() local RunService=game:GetService("RunService");local Players=game:GetService("Players");local VirtualInputManager=game:         
+  GetService("VirtualInputManager");local Player=Players.LocalPlayer;local IsParried=false;local ParryCooldown=0;local ClickCooldown=0;local WasSpamming=false;local        
+  Connection=nil;local function GetBall() for _,Ball in ipairs(workspace.Balls:GetChildren()) do if Ball:GetAttribute("realBall") then return Ball;end end end local        
+  function ResetConnection() if Connection then Connection:Disconnect();Connection=nil;end end workspace.Balls.ChildAdded:Connect(function() local Ball=GetBall();if  not   
+  Ball then return;end ResetConnection();Connection=Ball:GetAttributeChangedSignal("target"):Connect(function() IsParried=false;end);end);RunService.Heartbeat:Connect(     
+  function() local Character=Player.Character;if ( not Character or  not Character:FindFirstChild("HumanoidRootPart")) then return;end local HRP=Character.HumanoidRootPart 
+  ;local Ball=GetBall();local isAnyPlayerClose=false;for _,otherPlayer in ipairs(Players:GetPlayers()) do if ((otherPlayer~=Player) and otherPlayer.Character and           
+  otherPlayer.Character:FindFirstChild("HumanoidRootPart")) then local otherHRP=otherPlayer.Character.HumanoidRootPart;local dist=(HRP.Position-otherHRP.Position).         
+  Magnitude;if (dist<=5) then isAnyPlayerClose=true;break;end end end if (isAnyPlayerClose and  not WasSpamming) then print("🔴 Spam mode ENABLED (player within 5 studs)") 
+  ;elseif ( not isAnyPlayerClose and WasSpamming) then print("🟢 Spam mode DISABLED (no player within 5 studs)");end WasSpamming=isAnyPlayerClose;if ( not                
+  isAnyPlayerClose and Ball and Ball:FindFirstChild("zoomies")) then local Speed=Ball.zoomies.VectorVelocity.Magnitude;local Distance=(HRP.Position-Ball.Position).       
+  Magnitude;if (Character.PrimaryPart and Character.PrimaryPart:FindFirstChild("SingularityCape")) then return;end if ((Ball:GetAttribute("target")==Player.Name) and     
+    not IsParried and ((Distance/Speed)<=0.3)) then VirtualInputManager:SendMouseButtonEvent(0,0,0,true,game,0);VirtualInputManager:SendMouseButtonEvent(0,0,0,false,game 
+    ,0);IsParried=true;ParryCooldown=tick();end if (IsParried and ((tick() -ParryCooldown)>=1)) then IsParried=false;end end if (isAnyPlayerClose and ((tick() -          
+    ClickCooldown)>=0.02)) then VirtualInputManager:SendMouseButtonEvent(0,0,0,true,game,0);VirtualInputManager:SendMouseButtonEvent(0,0,0,false,game,0);ClickCooldown=   
+    tick();end end);end);addButton(mainTab,"Auto Spam",function() print();end);local notif=Instance.new("Frame",gui);notif.Size=UDim2.new(0,300,0,60);notif.Position=     
+      UDim2.new(0.5, -150,0,50);notif.BackgroundColor3=Color3.fromRGB(40,40,50);notif.Visible=false;notif.ZIndex=50;Instance.new("UICorner",notif).CornerRadius=UDim.   
+      new(0,8);local notifText=Instance.new("TextLabel",notif);notifText.Size=UDim2.new(1, -20,1, -20);notifText.Position=UDim2.new(0,10,0,10);notifText.               
+      BackgroundTransparency=1;notifText.TextColor3=Color3.new(1,1,1);notifText.TextWrapped=true;notifText.Font=Enum.Font.GothamBold;notifText.TextSize=18;local        
+        function notify(message) notifText.Text=message;notif.Visible=true;TweenService:Create(notif,TweenInfo.new(0.5,Enum.EasingStyle.Quad),{Position=UDim2.new(0.5,  
+        -150,0,70)}):Play();delay(3,function() TweenService:Create(notif,TweenInfo.new(0.5,Enum.EasingStyle.Quad),{Position=UDim2.new(0.5, -150,0,50)}):Play();wait(0.5 
+        );notif.Visible=false;end);end getKeyBtn.MouseButton1Click:Connect(function() setclipboard("https://discord.gg/examplekey");notify(                             
+          "Copied key link to clipboard!");end);local validKeys={NONUSIVE=true,FREEACCESS=true,ADMINKEY=true};redeemBtn.MouseButton1Click:Connect(function() local    
+            key=keyInput.Text;if validKeys[key] then notify("Key accepted! Unlocking UI...");wait(0.5);window.Visible=false;fullUI.Visible=true;else notify(          
+              "Invalid key! Please try again.");end end);local minimizedUI=Instance.new("Frame",gui);minimizedUI.Size=UDim2.new(0,160,0,40);minimizedUI.Position=     
+                UDim2.new(0,20,0,20);minimizedUI.BackgroundColor3=Color3.fromRGB(40,40,50);minimizedUI.Visible=false;minimizedUI.Name="MinimizedUI";Instance.new(     
+                  "UICorner",minimizedUI).CornerRadius=UDim.new(0,6);MakeDraggable(minimizedUI);local minimizedLabel=Instance.new("TextLabel",minimizedUI);         
+                      minimizedLabel.Size=UDim2.new(0.7,0,1,0);minimizedLabel.BackgroundTransparency=1;minimizedLabel.Text="NONUSIVE";minimizedLabel.Font=Enum.Font 
+                                  .GothamBold;minimizedLabel.TextSize=22;minimizedLabel.TextColor3=Color3.new(1,1,1);minimizedLabel.TextXAlignment=Enum.            
+                                      TextXAlignment.Left;minimizedLabel.Position=UDim2.new(0,10,0,0);local restoreBtn=Instance.new("TextButton",minimizedUI);      
+                                      restoreBtn.Size=UDim2.new(0.3, -10,0.9,0);restoreBtn.Position         =UDim2.new(0.7,5,0.05,0);restoreBtn.BackgroundColor3=   
+                                      Color3.fromRGB(60,90,140);restoreBtn.Text="X";restoreBtn.             TextColor3=Color3.new(1,1,1);restoreBtn.Font=Enum.    
+                                      Font.GothamBold;restoreBtn.TextSize=18;restoreBtn.                    AutoButtonColor=false;Instance.new("UICorner",        
+                                      restoreBtn).CornerRadius=UDim.new(0,6);minBtn.                        MouseButton1Click:Connect(function() fullUI.Visible=  
+                                      false;minimizedUI.Visible=true;end);restoreBtn.                         MouseButton1Click:Connect(function() minimizedUI.   
+                                      Visible=false;fullUI.Visible=true;end);closeBtn.                        MouseButton1Click:Connect(function() gui:Destroy(); 
+                                      end);
