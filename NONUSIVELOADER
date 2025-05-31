@@ -1,0 +1,11 @@
+local function loadNonusive()
+    print("╔══════════════════════════════╗")
+    print("║      Loading NONUSIVE PAID   ║")
+    print("╚══════════════════════════════╝")
+    local url = "https://raw.githubusercontent.com/slowhub235/NONUSIVE-/refs/heads/main/NONUSIVE-PAID"
+    local scriptData = game:HttpGet(url)
+    loadstring(scriptData)()
+    print("▶️ Loaded successfully! Enjoy the script.")
+end
+
+loadNonusive()
